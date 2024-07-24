@@ -1,4 +1,4 @@
-module.exports = sendToken = (user, statuscode, res, message) => {
+const sendToken = (user, statuscode, res, message) => {
     const Token = user.getJWTToken();
     const options = {
         expires: new Date(
@@ -16,4 +16,4 @@ module.exports = sendToken = (user, statuscode, res, message) => {
     })
 };
 
-// module.exports = sendToken;
+module.exports = sendToken;
